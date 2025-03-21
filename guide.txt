@@ -1,102 +1,67 @@
-----------------------------------------
-Basic Git Workflow
-----------------------------------------
+####################################
+#         ⚡ GIT CHEAT SHEET ⚡     #
+####################################
+
+🚀 BASIC GIT WORKFLOW
 
 1️⃣ Clone a Repository  
-git clone <repo_link>  
-✔️ Downloads the repository to your local machine.  
+   $ git clone <repo_link>
 
 2️⃣ List Files  
-ls  
-✔️ Shows the files in the current directory.  
+   $ ls
 
-3️⃣ Change Directoryg
-cd <folder_name>  
-✔️ Moves into the specified folder.  
-✔️ Any new files or edits will be made inside this folder.  
+3️⃣ Move into a Folder  
+   $ cd <folder_name>
 
-----------------------------------------
-File Management
-----------------------------------------
+📂 FILE MANAGEMENT
 
-🔹 Create a New File (PowerShell Alternative to touch)  
-New-Item hello.html -ItemType File  
-✔️ Creates an empty file named hello.html.  
-to move it for github/ to hello/ folder
-Move-Item test2.html hello/
+🔹 Create a File  
+   $ New-Item hello.html -ItemType File
 
-🔹 Verify File Creation  
-ls  
-✔️ Lists files to check if hello.html was created.  
+🔹 Move a File  
+   $ Move-Item test.html hello/
 
-🔹 What is a Directory?  
-✔️ A folder that stores files or other folders.  
+🔹 Check If a File Exists  
+   $ Test-Path hello.html
 
-----------------------------------------
-Using VS Code
-----------------------------------------
+🖥️ OPEN IN VS CODE
 
-🔹 Open Current Directory in VS Code  
-code .  
-✔️ Opens the current folder in Visual Studio Code.  
+🔹 Open Folder  
+   $ code .
 
-----------------------------------------
-Git Commands Explained
-----------------------------------------
+🔹 Open a File  
+   $ code filename
 
-1️⃣ git add → Selecting Pages to Save  
-🔹 Marks changes to be saved (does not save yet).   Tll git what file to keep track of
-🔹 Like putting items in your cart before checkout.  
-git add <file_name>  
+🚀 GIT COMMANDS
 
-2️⃣ git commit → Taking a Snapshot  
-🔹 Saves the current state of tracked files.   
-🔹 Allows you to go back to this version later.  
-git commit -m "Your commit message"  
+1️⃣ Stage Files  
+   $ git add <file_name>
 
-3️⃣ git push → Uploading to GitHub  
-🔹 Sends your committed changes to GitHub.  
-🔹 Even if your computer is lost, files remain online.  
-git push origin main  
+2️⃣ Commit Changes  
+   $ git commit -m "Your message"
 
-----------------------------------------
-Extra Git Commands
-----------------------------------------
+3️⃣ Push to GitHub  
+   $ git push origin main
 
-🔹 Unstage a File (Remove from git add)  
-git reset <file_name>  
+🔄 EXTRA COMMANDS
 
-🔹 See Commit History  
-git log  
+🔹 Check Git Status  
+   $ git status
 
-🔹 Go Back to an Old Version  
-git checkout <commit_id>  
----------------------------------------------
-git init
-🔹 It creates a hidden .git folder inside your project.
-🔹 This .git folder stores all version history and tracking data.
-🔹 It turns your folder into a Git repository so Git can track changes.
+🔹 Unstage a File  
+   $ git reset <file_name>
 
-------------------------------------------------------------
-git status 
-check the states
----------------------------------------------------------
-git push -u origin master
-✅ Use it only the first time you push a new branch to GitHub.
-------------------------------------------------------------
-move item out of hlsello directory ie folder
-Move-Item hello\test2.html .
--------------------------------------------------------
-MOVE INSIDE HELLO FOLDER
-Move-Item test2.html hello/
--------------------------------------------------------
-Checking If File Exists
+🔹 View Commit History  
+   $ git log
 
-Test-Path hello.html
-✔️ Returns True if the file exists, False otherwise.
---------------------------------------------
-to open a file use 
-code filename
------------------------------
-New-Item file1.html -ItemType File
-best way to cearte a file
+🔹 Go to an Old Version  
+   $ git checkout <commit_id>
+
+🛠️ FIRST-TIME SETUP
+
+🔹 Initialize a Git Repo  
+   $ git init
+
+🔹 First-Time Push  
+   $ git push -u origin master
+
